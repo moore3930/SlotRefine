@@ -1,0 +1,500 @@
+i want to fly from boston at 838 am and arrive in denver at 1110 in the morning	O O O O O B-fromloc.city_name O B-depart_time.time I-depart_time.time O O O B-toloc.city_name O B-arrive_time.time O O B-arrive_time.period_of_day	atis_flight
+show me all round trip flights between houston and las vegas	O O O B-round_trip I-round_trip O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name	atis_flight
+i would like some information on a flight from denver to san francisco on united airlines	O O O O O O O O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name O B-airline_name I-airline_name	atis_flight
+what are the coach flights between dallas and baltimore leaving august tenth and returning august twelve	O O O B-class_type O O B-fromloc.city_name O B-toloc.city_name O B-depart_date.month_name B-depart_date.day_number O O B-return_date.month_name B-return_date.day_number	atis_flight
+i'm flying from boston to the bay area	O O O B-fromloc.city_name O O B-toloc.city_name I-toloc.city_name	atis_flight
+okay can you tell me the flight cost between denver and atlanta	O O O O O O O O O B-fromloc.city_name O B-toloc.city_name	atis_flight
+from montreal to las vegas	O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name	atis_flight
+what is the earliest breakfast flight from philadelphia to fort worth	O O O B-flight_mod B-meal_description O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name	atis_flight
+flights from pittsburgh to baltimore between 10 am and 2 pm	O O B-fromloc.city_name O B-toloc.city_name O B-depart_time.start_time I-depart_time.start_time O B-depart_time.end_time I-depart_time.end_time	atis_flight
+what is the latest flight departing from boston to san francisco	O O O B-flight_mod O O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name	atis_flight
+flights from ontario to florida	O O B-fromloc.city_name O B-toloc.state_name	atis_flight
+i would like to know the first class fare on a flight from baltimore to denver	O O O O O O B-class_type I-class_type O O O O O B-fromloc.city_name O B-toloc.city_name	atis_airfare
+okay that sounds great let's go from atlanta on april twenty one in the morning to dallas least expensive fare one way	O O O O O O O B-fromloc.city_name O B-depart_date.month_name B-depart_date.day_number I-depart_date.day_number O O B-depart_time.period_of_day O B-toloc.city_name B-cost_relative I-cost_relative O B-round_trip I-round_trip	atis_flight
+show me the prices of all flights from atlanta to washington dc	O O O O O O O O B-fromloc.city_name O B-toloc.city_name B-toloc.state_code	atis_airfare
+flights from cincinnati to o'hare departing after 718 am american	O O B-fromloc.city_name O B-toloc.airport_name O B-depart_time.time_relative B-depart_time.time I-depart_time.time B-airline_name	atis_flight
+i'm interested in a flight from pittsburgh to atlanta	O O O O O O B-fromloc.city_name O B-toloc.city_name	atis_flight
+i am interested in booking an early morning flight from dallas into houston on february twenty second and returning late in the evening of february twenty second	O B-depart_time.period_of_day O O O O B-depart_time.period_of_day B-depart_time.period_of_day O O B-fromloc.city_name O B-toloc.city_name O B-depart_date.month_name B-depart_date.day_number I-depart_date.day_number O O O O O B-return_time.period_of_day O B-return_date.month_name B-return_date.day_number I-return_date.day_number	atis_flight
+i'm looking for a flight from oakland to denver with a stopover in dallas fort worth	O O O O O O B-fromloc.city_name O B-toloc.city_name O O O O B-stoploc.city_name I-stoploc.city_name I-stoploc.city_name	atis_flight
+what's restriction ap68	O O B-restriction_code	atis_restriction
+what types of ground transportation are available in philadelphia	O O O O O O O O B-city_name	atis_ground_service
+what does the abbreviation co mean	O O O O B-airline_code O	atis_abbreviation
+a first class flight on american to san francisco on the coming tuesday	O B-class_type I-class_type O O B-airline_name O B-toloc.city_name I-toloc.city_name O O B-depart_date.date_relative B-depart_date.day_name	atis_flight
+please list the flights from baltimore to san francisco on fridays	O O O O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name O B-depart_date.day_name	atis_flight
+what flights return from denver to philadelphia on a saturday	O O O O B-fromloc.city_name O B-toloc.city_name O O B-depart_date.day_name	atis_flight
+on united airlines flying from denver to san francisco before 10 am what type of aircraft is used	O B-airline_name I-airline_name O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name B-depart_time.time_relative B-depart_time.time I-depart_time.time O O O O O O	atis_flight
+i need a flight from atlanta to baltimore nonstop arriving at 7 pm please	O O O O O B-fromloc.city_name O B-toloc.city_name B-flight_stop O O B-arrive_time.time I-arrive_time.time O	atis_flight
+what are the cheapest round trip flights from denver to atlanta	O O O B-cost_relative B-round_trip I-round_trip O O B-fromloc.city_name O B-toloc.city_name	atis_flight
+does continental fly from denver to san francisco	O B-airline_name O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name	atis_flight
+i would like a nonstop flight from st. petersburg to charlotte leaving in the afternoon	O O O O B-flight_stop O O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name O O O B-arrive_time.period_of_day	atis_flight
+on continental airlines any class service from san francisco to pittsburgh	O B-airline_name I-airline_name O O O O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name	atis_flight
+find me the cheapest flight from boston to washington	O O O B-cost_relative O O B-fromloc.city_name O B-toloc.city_name	atis_flight
+well i'll try last time tell me the kind of aircraft united airlines flies from denver to san francisco before 10 o'clock in the morning	O O O O O O O O O O O B-airline_name I-airline_name O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name B-depart_time.time_relative B-depart_time.time I-depart_time.time O O B-depart_time.period_of_day	atis_aircraft
+show me the northwest flights from detroit to st. petersburg	O O O B-airline_name O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name	atis_flight
+morning flights from pittsburgh to atlanta on wednesday	B-depart_time.period_of_day O O B-fromloc.city_name O B-toloc.city_name O B-depart_date.day_name	atis_flight
+show me flights first class from san francisco to pittsburgh leaving on tuesday after 8 o'clock in the morning and before 12 noon	O O O B-class_type I-class_type O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name O O B-depart_date.day_name B-depart_time.time_relative B-depart_time.time I-depart_time.time O O B-depart_time.period_of_day O B-depart_time.time_relative B-depart_time.time I-depart_time.time	atis_flight
+what's the most expensive way i can fly to washington	O O B-cost_relative I-cost_relative O O O O O B-toloc.city_name	atis_flight
+show me the cheapest one way fare from baltimore to dallas	O O O B-cost_relative B-round_trip I-round_trip O O B-fromloc.city_name O B-toloc.city_name	atis_airfare
+flights from boston flights from philadelphia to boston on monday	O O B-fromloc.city_name O O B-fromloc.city_name O B-toloc.city_name O B-depart_date.day_name	atis_flight
+list nonstop flights from houston to dallas which arrive before midnight	O B-flight_stop O O B-fromloc.city_name O B-toloc.city_name O O B-arrive_time.time_relative B-arrive_time.period_of_day	atis_flight
+i need a flight to seattle leaving from baltimore making a stop in minneapolis	O O O O O B-toloc.city_name O O B-fromloc.city_name O O O O B-stoploc.city_name	atis_flight
+philadelphia to san francisco please	B-fromloc.city_name O B-toloc.city_name I-toloc.city_name O	atis_flight
+airline that stands for dl	O O O O B-airline_code	atis_airline
+i'd like a cheap flight from dallas to baltimore on january first	O O O B-flight_mod O O B-fromloc.city_name O B-toloc.city_name O B-depart_date.month_name B-depart_date.day_number	atis_flight
+what flights are available friday from san francisco to boston	O O O O B-depart_date.day_name O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name	atis_flight
+show me saturday and sunday's flights from milwaukee to phoenix on american airlines	O O B-depart_date.day_name O B-depart_date.day_name O O B-fromloc.city_name O B-toloc.city_name O B-airline_name I-airline_name	atis_flight
+what flights from st. paul to kansas city on friday with lunch served	O O O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name I-toloc.city_name O B-depart_date.day_name O B-meal_description O	atis_flight
+what flights from toronto to philadelphia	O O O B-fromloc.city_name O B-toloc.city_name	atis_flight
+what flights leave from atlanta to boston on june twenty ninth in the afternoon	O O O O B-fromloc.city_name O B-toloc.city_name O B-depart_date.month_name B-depart_date.day_number I-depart_date.day_number O O B-depart_time.period_of_day	atis_flight
+what flights leave la guardia for san jose and arrive 10 pm	O O O B-fromloc.airport_name I-fromloc.airport_name O B-toloc.city_name I-toloc.city_name O O B-arrive_time.time I-arrive_time.time	atis_flight
+list the total number of flights to all airports by delta	O O O O O O O O O O B-airline_name	atis_quantity
+can you tell me the time a flight would leave from atlanta to boston in the afternoon	O O O O O B-flight_time O O O O O B-fromloc.city_name O B-toloc.city_name O O B-depart_time.period_of_day	atis_flight_time
+show me the united airlines flights from denver to baltimore leaving on june fourteenth	O O O B-airline_name I-airline_name O O B-fromloc.city_name O B-toloc.city_name O O B-depart_date.month_name B-depart_date.day_number	atis_flight
+please list all flights from dallas to philadelphia on monday	O O O O O B-fromloc.city_name O B-toloc.city_name O B-depart_date.day_name	atis_flight
+show me the flights from cleveland to memphis	O O O O O B-fromloc.city_name O B-toloc.city_name	atis_flight
+please give me flights from atlanta to boston on wednesday and thursday	O O O O O B-fromloc.city_name O B-toloc.city_name O B-depart_date.day_name O B-depart_date.day_name	atis_flight
+show me ground transportation in philadelphia on monday morning	O O O O O B-city_name O B-day_name B-period_of_day	atis_ground_service
+what delta leaves boston for atlanta	O B-airline_name O B-fromloc.city_name O B-toloc.city_name	atis_flight
+find me the earliest boston departure and the latest atlanta return trip so that i can be on the ground the maximum amount of time in atlanta and return to boston on the same day	O O O B-flight_mod B-fromloc.city_name O O O B-flight_mod B-fromloc.city_name O O O O O O O O O O O O O O O O B-toloc.city_name O O O B-toloc.city_name O O O B-return_date.date_relative	atis_flight
+show me flights from boston to washington leaving july fifteen	O O O O B-fromloc.city_name O B-toloc.city_name O B-depart_date.month_name B-depart_date.day_number	atis_flight
+i would like the time of your earliest flight in the morning from philadelphia to washington on american airlines	O O O O B-flight_time O O B-flight_mod O O O B-depart_time.period_of_day O B-fromloc.city_name O B-toloc.city_name O B-airline_name I-airline_name	atis_flight_time
+show me the flights from baltimore to boston	O O O O O B-fromloc.city_name O B-toloc.city_name	atis_flight
+please list the flight schedule from baltimore to san francisco on friday nights	O O O B-flight_time I-flight_time O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name O B-depart_date.day_name B-depart_time.period_of_day	atis_flight_time
+how long is a trip from philadelphia airport to downtown philadelphia	O O O O O O B-fromloc.airport_name I-fromloc.airport_name O O B-toloc.city_name	atis_distance
+sure i'd like to determine what aircraft are use on july seventh leaving from boston and arriving in atlanta on july seventh	O O O O O O O O O O B-depart_date.month_name B-depart_date.day_number O O B-fromloc.city_name O O O B-toloc.city_name O B-arrive_date.month_name B-arrive_date.day_number	atis_aircraft
+baltimore to philadelphia	B-fromloc.city_name O B-toloc.city_name	atis_flight
+what are the flights and fares from atlanta to philadelphia	O O O O O O O B-fromloc.city_name O B-toloc.city_name	atis_flight#atis_airfare
+united airlines flights stopping in denver	B-airline_name I-airline_name O O O B-stoploc.city_name	atis_flight
+what flights are available wednesday afternoon from denver to san francisco	O O O O B-depart_date.day_name B-depart_time.period_of_day O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name	atis_flight
+round trip fares from denver to philadelphia less than 1000 dollars	B-round_trip I-round_trip O O B-fromloc.city_name O B-toloc.city_name B-cost_relative O B-fare_amount I-fare_amount	atis_airfare
+list the first class flights from baltimore to denver	O O B-class_type I-class_type O O B-fromloc.city_name O B-toloc.city_name	atis_flight
+what are the fares from newark to la monday and wednesday	O O O O O B-fromloc.city_name O B-toloc.city_name B-depart_date.day_name O B-depart_date.day_name	atis_airfare
+what flights from chicago to kansas city	O O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name	atis_flight
+please show me flights from dallas to atlanta on monday	O O O O O B-fromloc.city_name O B-toloc.city_name O B-depart_date.day_name	atis_flight
+flights to baltimore	O O B-toloc.city_name	atis_flight
+show me the latest flight to love field	O O O B-flight_mod O O B-toloc.airport_name I-toloc.airport_name	atis_flight
+how many of delta's night flights are first class	O O O B-airline_name B-depart_time.period_of_day O O B-class_type I-class_type	atis_quantity
+on united airlines give me the flight times from boston to dallas	O B-airline_name I-airline_name O O O B-flight_time I-flight_time O B-fromloc.city_name O B-toloc.city_name	atis_flight_time
+show me the ground transportation schedule in philadelphia in the morning on wednesday	O O O O O O O B-city_name O O B-period_of_day O B-day_name	atis_ground_service
+what is the last flight from boston to atlanta	O O O B-flight_mod O O B-fromloc.city_name O B-toloc.city_name	atis_flight
+what flights fly from denver to san francisco on monday tuesday wednesday thursday and friday	O O O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name O B-depart_date.day_name B-depart_date.day_name B-depart_date.day_name B-depart_date.day_name O B-depart_date.day_name	atis_flight
+show me the flights from boston to philadelphia	O O O O O B-fromloc.city_name O B-toloc.city_name	atis_flight
+i also need to go to san francisco on wednesday evening from dallas	O O O O O O B-toloc.city_name I-toloc.city_name O B-depart_date.day_name B-depart_time.period_of_day O B-fromloc.city_name	atis_flight
+from kansas city to salt lake city on delta arrive around 8 pm tomorrow	O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name I-toloc.city_name I-toloc.city_name O B-airline_name O B-arrive_time.time_relative B-arrive_time.time I-arrive_time.time B-arrive_date.today_relative	atis_flight
+in new york i'll need to rent a car	O B-city_name I-city_name O O O O O B-transport_type	atis_ground_service
+show me flights from denver to boston on thursday	O O O O B-fromloc.city_name O B-toloc.city_name O B-depart_date.day_name	atis_flight
+i would like to book a flight from charlotte to baltimore on april eighth	O O O O O O O O B-fromloc.city_name O B-toloc.city_name O B-depart_date.month_name B-depart_date.day_number	atis_flight
+flights from oakland to san francisco on january twenty first 1992	O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name O B-depart_date.month_name B-depart_date.day_number I-depart_date.day_number B-depart_date.year	atis_flight
+how much is a limousine between dallas fort worth international airport and dallas	O O O O B-transport_type O B-fromloc.airport_name I-fromloc.airport_name I-fromloc.airport_name I-fromloc.airport_name I-fromloc.airport_name O B-toloc.city_name	atis_ground_fare
+is there a flight from boston to san francisco making a stopover in dallas fort worth	O O O O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name O O O O B-stoploc.city_name I-stoploc.city_name I-stoploc.city_name	atis_flight
+what time are the flights from baltimore to san francisco	O B-flight_time O O O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name	atis_flight_time
+from las vegas to phoenix departing in the morning	O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name O O O B-depart_time.period_of_day	atis_flight
+how many passengers can a boeing 737 hold	O O O O O O B-aircraft_code O	atis_capacity
+i would like a flight that leaves on friday from philadelphia to dallas that makes a stop in atlanta	O O O O O O O O B-depart_date.day_name O B-fromloc.city_name O B-toloc.city_name O O O O O B-stoploc.city_name	atis_flight
+thank you for that information now i would like information on a flight on april sixteen from atlanta to philadelphia early in the morning	O O O O O O O O O O O O O O B-depart_date.month_name B-depart_date.day_number O B-fromloc.city_name O B-toloc.city_name B-depart_time.period_mod O O B-depart_time.period_of_day	atis_flight
+what time is the last flight from washington to san francisco	O B-flight_time O O B-flight_mod O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name	atis_flight_time
+show me the least expensive flight leaving miami on sunday after 12 o'clock noon and arriving cleveland	O O O B-cost_relative I-cost_relative O O B-fromloc.city_name O B-depart_date.day_name B-depart_time.time_relative B-depart_time.time I-depart_time.time I-depart_time.time O O B-toloc.city_name	atis_flight
+what do you have tomorrow morning from pittsburgh to atlanta	O O O O B-depart_date.today_relative B-depart_time.period_of_day O B-fromloc.city_name O B-toloc.city_name	atis_flight
+how much is the cheapest flight from denver to pittsburgh	O O O O B-cost_relative O O B-fromloc.city_name O B-toloc.city_name	atis_airfare
+what is the cheapest one way fare from pittsburgh to atlanta traveling on tuesday august twentieth	O O O B-cost_relative B-round_trip I-round_trip O O B-fromloc.city_name O B-toloc.city_name O O B-depart_date.day_name B-depart_date.month_name B-depart_date.day_number	atis_airfare
+show me the flights from denver to san diego leaving after 5 pm	O O O O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name O B-depart_time.time_relative B-depart_time.time I-depart_time.time	atis_flight
+what is the latest first class flight of the day leaving dallas for san francisco	O O O B-flight_mod B-class_type I-class_type O O O O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name	atis_flight
+show me a list of flights from pittsburgh to baltimore on august third	O O O O O O O B-fromloc.city_name O B-toloc.city_name O B-depart_date.month_name B-depart_date.day_number	atis_flight
+show morning flights from san francisco to pittsburgh	O B-depart_time.period_of_day O O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name	atis_flight
+what are the flights from memphis to tacoma	O O O O O B-fromloc.city_name O B-toloc.city_name	atis_flight
+can you list all nonstop flights between st. petersburg and charlotte that leave in the afternoon and arrive soon after 5 pm	O O O O B-flight_stop O O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name O O O O B-arrive_time.period_of_day O O O B-arrive_time.time_relative B-arrive_time.time I-arrive_time.time	atis_flight
+show me all united flights from denver to san francisco for september first 1991	O O O B-airline_name O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name O B-depart_date.month_name B-depart_date.day_number B-depart_date.year	atis_flight
+are there wednesday morning flights between pittsburgh and boston	O O B-depart_date.day_name B-depart_time.period_of_day O O B-fromloc.city_name O B-toloc.city_name	atis_flight
+list all american airlines from milwaukee to phoenix on saturday	O O B-airline_name I-airline_name O B-fromloc.city_name O B-toloc.city_name O B-depart_date.day_name	atis_flight
+give me the flights on december twenty seventh with the fares from indianapolis to orlando	O O O O O B-depart_date.month_name B-depart_date.day_number I-depart_date.day_number O O O O B-fromloc.city_name O B-toloc.city_name	atis_flight
+okay all right do you have a flight on united airlines from atlanta to washington	O O O O O O O O O B-airline_name I-airline_name O B-fromloc.city_name O B-toloc.city_name	atis_flight
+show flights from denver to oakland arriving between 12 and 1 o'clock	O O O B-fromloc.city_name O B-toloc.city_name O O B-arrive_time.start_time O B-arrive_time.end_time I-arrive_time.end_time	atis_flight
+list all nonstop flights on sunday from tampa to charlotte	O O B-flight_stop O O B-arrive_date.day_name O B-fromloc.city_name O B-toloc.city_name	atis_flight
+i would like to make a one way flight from boston to atlanta	O O O O O O B-round_trip I-round_trip O O B-fromloc.city_name O B-toloc.city_name	atis_flight
+is there a flight in the afternoon from philadelphia that arrives in the evening in denver	O O O O O O B-depart_time.period_of_day O B-fromloc.city_name O O O O B-arrive_time.period_of_day O B-toloc.city_name	atis_flight
+what is the first flight from atlanta to baltimore that serves lunch	O O O B-flight_mod O O B-fromloc.city_name O B-toloc.city_name O O B-meal_description	atis_flight
+list list flights between oakland and denver	O O O O B-fromloc.city_name O B-toloc.city_name	atis_flight
+please give me a flight from boston to atlanta before 10 am in the morning	O O O O O O B-fromloc.city_name O B-toloc.city_name B-depart_time.time_relative B-depart_time.time I-depart_time.time O O B-depart_time.period_of_day	atis_flight
+list the nonstop flights early tuesday morning from dallas to atlanta	O O B-flight_stop O B-arrive_time.period_mod B-arrive_date.day_name B-arrive_time.period_of_day O B-fromloc.city_name O B-toloc.city_name	atis_flight
+what's the lowest round trip fare from denver to pittsburgh	O O B-cost_relative B-round_trip I-round_trip O O B-fromloc.city_name O B-toloc.city_name	atis_airfare
+please arrange a flight for me from denver to san francisco on us air	O O O O O O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name O B-airline_name I-airline_name	atis_flight
+i would like to see information for flights from san francisco leaving after 12 pm to pittsburgh on monday	O O O O O O O O O B-fromloc.city_name I-fromloc.city_name O B-depart_time.time_relative B-depart_time.time I-depart_time.time O B-toloc.city_name O B-depart_date.day_name	atis_flight
+show me the cheapest flight from pittsburgh to atlanta on wednesday which leaves before noon and serves breakfast	O O O B-cost_relative O O B-fromloc.city_name O B-toloc.city_name O B-depart_date.day_name O O B-depart_time.time_relative B-depart_time.time O O B-meal_description	atis_flight
+what is the earliest flight from washington to san francisco	O O O B-flight_mod O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name	atis_flight
+list flights from pittsburgh to los angeles which leave on thursday after 5 pm	O O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name O O O B-depart_date.day_name B-depart_time.time_relative B-depart_time.time I-depart_time.time	atis_flight
+list the flights from new york to miami on a tuesday which are nonstop and cost less than 466 dollars	O O O O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name O O B-depart_date.day_name O O B-flight_stop O O B-cost_relative O B-fare_amount I-fare_amount	atis_flight
+list flights from denver to san francisco no denver to philadelphia	O O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name O B-fromloc.city_name O B-toloc.city_name	atis_flight
+i need to find a plane from boston to san francisco on friday	O O O O O O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name O B-depart_date.day_name	atis_aircraft
+what does lax stand for	O O B-airport_code O O	atis_abbreviation
+show prices for all flights from baltimore to dallas on july twenty ninth	O O O O O O B-fromloc.city_name O B-toloc.city_name O B-depart_date.month_name B-depart_date.day_number I-depart_date.day_number	atis_airfare
+what flights are available from boston to washington late monday evening or early tuesday morning	O O O O O B-fromloc.city_name O B-toloc.city_name B-depart_time.period_mod B-depart_date.day_name B-depart_time.period_of_day B-or B-depart_time.period_mod B-depart_date.day_name B-depart_time.period_of_day	atis_flight
+what flights from washington dc to toronto	O O O B-fromloc.city_name B-fromloc.state_code O B-toloc.city_name	atis_flight
+all flights from boston to washington dc on november eleventh before 10 am	O O O B-fromloc.city_name O B-toloc.city_name B-toloc.state_code O B-depart_date.month_name B-depart_date.day_number B-depart_time.time_relative B-depart_time.time I-depart_time.time	atis_flight
+list all flights from denver to philadelphia	O O O O B-fromloc.city_name O B-toloc.city_name	atis_flight
+i need a list of late afternoon flights from st. louis to chicago	O O O O O B-depart_time.period_of_day I-depart_time.period_of_day O O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name	atis_flight
+show me the airlines for flights to or from love field	O O O O O O O O O B-fromloc.airport_name I-fromloc.airport_name	atis_airline
+do you have any flights from chicago to indianapolis	O O O O O O B-fromloc.city_name O B-toloc.city_name	atis_flight
+what does yn stand for	O O B-fare_basis_code O O	atis_abbreviation
+shortest flights from nashville to st. petersburg	B-flight_mod O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name	atis_flight
+what are the fares for flights between atlanta and dfw	O O O O O O O B-fromloc.city_name O B-toloc.airport_code	atis_airfare
+list the fares of midway airlines flights from boston to philadelphia	O O O O B-airline_name I-airline_name O O B-fromloc.city_name O B-toloc.city_name	atis_airfare
+round trip fares from denver to philadelphia less than 1000 dollars	B-round_trip I-round_trip O O B-fromloc.city_name O B-toloc.city_name B-cost_relative O B-fare_amount I-fare_amount	atis_airfare
+is there a continental flight leaving from las vegas to new york nonstop	O O O B-airline_name O O O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name I-toloc.city_name B-flight_stop	atis_flight
+i need the cost of a ticket going from denver to baltimore a first class ticket on united airlines	O O O O O O O O O B-fromloc.city_name O B-toloc.city_name O B-class_type I-class_type O O B-airline_name I-airline_name	atis_airfare
+show me fares from philadelphia to san francisco on thursday morning	O O O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name O B-depart_date.day_name B-depart_time.period_of_day	atis_airfare
+show me the round trip flights between phoenix and salt lake city	O O O B-round_trip I-round_trip O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name I-toloc.city_name	atis_flight
+show me all the flights from denver to baltimore arriving may tenth	O O O O O O B-fromloc.city_name O B-toloc.city_name O B-arrive_date.month_name B-arrive_date.day_number	atis_flight
+find the cheapest one way fare from boston to san francisco	O O B-cost_relative B-round_trip I-round_trip O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name	atis_airfare
+show me the flights from boston to san francisco	O O O O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name	atis_flight
+please show me the flights from boston to san francisco	O O O O O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name	atis_flight
+show me the airlines from love field	O O O O O B-fromloc.airport_name I-fromloc.airport_name	atis_airline
+show business class fares on us air from boston to toronto	O B-class_type I-class_type O O B-airline_name I-airline_name O B-fromloc.city_name O B-toloc.city_name	atis_airfare
+what is the latest flight leaving las vegas for ontario	O O O B-flight_mod O O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name	atis_flight
+flights from las vegas to phoenix	O O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name	atis_flight
+does flight ua 270 from denver to philadelphia have a meal	O O B-airline_code B-flight_number O B-fromloc.city_name O B-toloc.city_name O O B-meal	atis_flight
+what nonstop flights are available from oakland to philadelphia arriving between 5 and 6 pm	O B-flight_stop O O O O B-fromloc.city_name O B-toloc.city_name O O B-arrive_time.start_time O B-arrive_time.end_time I-arrive_time.end_time	atis_flight
+give me the flights for american airline from philadelphia to dallas	O O O O O B-airline_name I-airline_name O B-fromloc.city_name O B-toloc.city_name	atis_flight
+show me the evening flights from atlanta to washington on wednesdays	O O O B-depart_time.period_of_day O O B-fromloc.city_name O B-toloc.city_name O B-depart_date.day_name	atis_flight
+i would like a coach class seat on a flight leaving denver arriving atlanta	O O O O B-class_type I-class_type O O O O O B-fromloc.city_name O B-toloc.city_name	atis_flight
+can you list all the flights between phoenix and las vegas	O O O O O O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name	atis_flight
+show me the qx fare flights between atlanta and oakland on delta airlines	O O O B-fare_basis_code I-fare_basis_code O O B-fromloc.city_name O B-toloc.city_name O B-airline_name I-airline_name	atis_flight
+what afternoon flights are available between denver and dallas fort worth	O B-depart_time.period_of_day O O O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name I-toloc.city_name	atis_flight
+fares and flights from pittsburgh to philadelphia	O O O O B-fromloc.city_name O B-toloc.city_name	atis_airfare
+can you tell me what airline flies between denver and san francisco	O O O O O O O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name	atis_airline
+how many flights does each airline have with booking class k	O O O O O O O O O O B-fare_basis_code	atis_quantity
+great now what i want to find out is on april twentieth from washington to denver do you have a flight least expensive fare around 5 o'clock in the morning	O O O O O O O O O O B-depart_date.month_name B-depart_date.day_number O B-fromloc.city_name O B-toloc.city_name O O O O O B-cost_relative I-cost_relative O B-depart_time.time_relative B-depart_time.time I-depart_time.time O O B-depart_time.period_of_day	atis_flight
+show me all direct flights from san francisco to boston departing before noon	O O O B-connect O O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name O B-depart_time.time_relative B-depart_time.time	atis_flight
+i need a flight on thursday before 8 am from oakland to salt lake city	O O O O O B-depart_date.day_name B-depart_time.time_relative B-depart_time.time I-depart_time.time O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name I-toloc.city_name	atis_flight
+show me all the types of aircraft	O O O O O O O	atis_aircraft
+i want a flight on continental from boston to san francisco	O O O O O B-airline_name O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name	atis_flight
+show flights from pittsburgh into san francisco	O O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name	atis_flight
+what city is mco	O O O B-airport_code	atis_city
+how many cities are served by american airline with first class flights	O O O O O O B-airline_name I-airline_name O B-class_type I-class_type O	atis_quantity
+could you please show me all flights from charlotte to milwaukee	O O O O O O O O B-fromloc.city_name O B-toloc.city_name	atis_flight
+what flights depart san francisco after 4 pm and fly to washington via indianapolis	O O O B-fromloc.city_name I-fromloc.city_name B-depart_time.time_relative B-depart_time.time I-depart_time.time O O O B-toloc.city_name O B-stoploc.city_name	atis_flight
+i would like to see the flights from denver to philadelphia	O O O O O O O O B-fromloc.city_name O B-toloc.city_name	atis_flight
+show me the flights that go from san diego to newark new jersey by way of houston	O O O O O O O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name B-toloc.state_name I-toloc.state_name O O O B-stoploc.city_name	atis_flight
+i would like information on flights from denver to san francisco after noon on wednesday	O O O O O O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name B-depart_time.time_relative B-depart_time.time O B-depart_date.day_name	atis_flight
+show me the flights from boston to pittsburgh	O O O O O B-fromloc.city_name O B-toloc.city_name	atis_flight
+show me all flights from san diego to new york nonstop	O O O O O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name I-toloc.city_name B-flight_stop	atis_flight
+show me the round trip tickets from baltimore to atlanta	O O O B-round_trip I-round_trip O O B-fromloc.city_name O B-toloc.city_name	atis_airfare
+show me the cheapest one way fares from san diego to miami	O O O B-cost_relative B-round_trip I-round_trip O O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name	atis_airfare
+could you show me all weekday flights from phoenix to denver	O O O O O B-flight_mod O O B-fromloc.city_name O B-toloc.city_name	atis_flight
+i would like to fly from boston to philadelphia next thursday	O O O O O O B-fromloc.city_name O B-toloc.city_name B-depart_date.date_relative B-depart_date.day_name	atis_flight
+i'm planning a trip to pittsburgh and i live in denver can you help me	O O O O O B-toloc.city_name O O O O B-fromloc.city_name O O O O	atis_flight
+i would like to find the least expensive flight from boston to denver	O O O O O O B-cost_relative I-cost_relative O O B-fromloc.city_name O B-toloc.city_name	atis_flight
+i would like to go from atlanta to denver on tuesday	O O O O O O B-fromloc.city_name O B-toloc.city_name O B-depart_date.day_name	atis_flight
+atlanta to pittsburgh july twenty third	B-fromloc.city_name O B-toloc.city_name B-depart_date.month_name B-depart_date.day_number I-depart_date.day_number	atis_flight
+show me the flights from boston to atlanta	O O O O O B-fromloc.city_name O B-toloc.city_name	atis_flight
+what airlines fly from burbank to denver	O O O O B-fromloc.city_name O B-toloc.city_name	atis_airline
+okay we're going from washington to denver first class ticket i'd like to know the cost of a first class ticket	O O O O B-fromloc.city_name O B-toloc.city_name B-class_type I-class_type O O O O O O O O O B-class_type I-class_type O	atis_airfare
+i wish to book a flight from pittsburgh to atlanta coach discount fare	O O O O O O O B-fromloc.city_name O B-toloc.city_name B-class_type O O	atis_flight
+is it possible for me to fly from baltimore to san francisco	O O O O O O O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name	atis_flight
+i want to fly from denver to san francisco with at least one stop	O O O O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name O O O B-flight_stop I-flight_stop	atis_flight
+how many us air flights leave from washington	O O B-airline_name I-airline_name O O O B-fromloc.city_name	atis_quantity
+please list any flight available leaving oakland california tuesday arriving philadelphia wednesday	O O O O O O B-fromloc.city_name B-fromloc.state_name B-depart_date.day_name O B-toloc.city_name B-arrive_date.day_name	atis_flight
+i'd like to find a flight from las vegas to detroit michigan that leaves in the afternoon on monday	O O O O O O O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name B-toloc.state_name O O O O B-depart_time.period_of_day O B-depart_date.day_name	atis_flight
+are there any flights from denver to pittsburgh with stops in atlanta	O O O O O B-fromloc.city_name O B-toloc.city_name O O O B-stoploc.city_name	atis_flight
+i'd like to know the information from boston to philadelphia nonstop	O O O O O O O B-fromloc.city_name O B-toloc.city_name B-flight_stop	atis_flight
+show me all flights from denver to philadelphia on saturday after sunday which leave after noon	O O O O O B-fromloc.city_name O B-toloc.city_name O B-depart_date.day_name B-depart_date.date_relative B-depart_date.day_name O O B-depart_time.time_relative B-depart_time.time	atis_flight
+what are the flights from dallas to baltimore	O O O O O B-fromloc.city_name O B-toloc.city_name	atis_flight
+do you have a flight from san francisco to atlanta around 8 am	O O O O O O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name B-depart_time.time_relative B-depart_time.time I-depart_time.time	atis_flight
+what flights from seattle to salt lake city	O O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name I-toloc.city_name	atis_flight
+what is the cheapest flight from boston to bwi	O O O B-cost_relative O O B-fromloc.city_name O B-toloc.airport_code	atis_flight
+are there any flights from new york to los angeles which stop over in milwaukee	O O O O O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name I-toloc.city_name O O O O B-stoploc.city_name	atis_flight
+what is the earliest flight from oakland to washington dc on sunday	O O O B-flight_mod O O B-fromloc.city_name O B-toloc.city_name B-toloc.state_code O B-depart_date.day_name	atis_flight
+are there any turboprop flights from pittsburgh to baltimore on december seventeenth	O O O O O O B-fromloc.city_name O B-toloc.city_name O B-depart_date.month_name B-depart_date.day_number	atis_flight
+show me the morning flights from boston to philadelphia	O O O B-depart_time.period_of_day O O B-fromloc.city_name O B-toloc.city_name	atis_flight
+newark to cleveland daily	B-fromloc.city_name O B-toloc.city_name B-flight_days	atis_flight
+evening flights from philadelphia to oakland	B-depart_time.period_of_day O O B-fromloc.city_name O B-toloc.city_name	atis_flight
+show me prices and times for first class travel from baltimore to dallas next summer	O O O O B-flight_time O B-class_type I-class_type O O B-fromloc.city_name O B-toloc.city_name O O	atis_airfare
+what kind of plane flies from boston to pittsburgh after noon	O O O O O O B-fromloc.city_name O B-toloc.city_name B-depart_time.time_relative B-depart_time.time	atis_aircraft
+i'd like to know what flights united airline has from dallas to san francisco	O O O O O O B-airline_name I-airline_name O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name	atis_flight
+show me morning flights from toronto	O O B-depart_time.period_of_day O O B-fromloc.city_name	atis_flight
+what ground transportation is available at the boston airport	O O O O O O O B-airport_name I-airport_name	atis_ground_service
+where do the flights from boston to oakland stop	O O O O O B-fromloc.city_name O B-toloc.city_name B-flight_stop	atis_airport
+show me the earliest flight from boston to san francisco	O O O B-flight_mod O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name	atis_flight
+flights from la guardia or jfk to cleveland	O O B-fromloc.airport_name I-fromloc.airport_name B-or B-fromloc.airport_code O B-toloc.city_name	atis_flight
+find the cheapest one way fare from boston to san francisco	O O B-cost_relative B-round_trip I-round_trip O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name	atis_airfare
+what are the flights from washington dc to denver	O O O O O B-fromloc.city_name B-fromloc.state_code O B-toloc.city_name	atis_flight
+give me information on flights from atlanta to washington dc on wednesday after 4 pm and thursday before 9 am	O O O O O O B-fromloc.city_name O B-toloc.city_name B-toloc.state_code O B-depart_date.day_name B-depart_time.time_relative B-depart_time.time I-depart_time.time O B-depart_date.day_name B-depart_time.time_relative B-depart_time.time I-depart_time.time	atis_flight
+flights between baltimore and washington dc	O O B-fromloc.city_name O B-toloc.city_name B-toloc.state_code	atis_flight
+what fare codes cover flights from philadelphia to san francisco	O O O O O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name	atis_abbreviation
+are there any flights from boston to oakland that stop	O O O O O B-fromloc.city_name O B-toloc.city_name O B-flight_stop	atis_flight
+list departure times from denver to philadelphia which are later than 10 o'clock and earlier than 2 pm	O B-flight_time I-flight_time O B-fromloc.city_name O B-toloc.city_name O O B-depart_time.time_relative O B-depart_time.time I-depart_time.time O B-depart_time.time_relative O B-depart_time.time I-depart_time.time	atis_flight_time
+are there any airlines that have flights from boston to philadelphia that leave before 630 am	O O O O O O O O B-fromloc.city_name O B-toloc.city_name O O B-depart_time.time_relative B-depart_time.time I-depart_time.time	atis_airline
+how many first class flights does united have today	O O B-class_type I-class_type O O B-airline_name O B-depart_date.today_relative	atis_quantity
+please show me the flights available from san francisco to pittsburgh on tuesday	O O O O O O O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name O B-depart_date.day_name	atis_flight
+i'm in miami and i'd like to travel to las vegas on sunday	O O B-fromloc.city_name O O O O O O B-toloc.city_name I-toloc.city_name O B-depart_date.day_name	atis_flight
+show me flights from denver to philadelphia	O O O O B-fromloc.city_name O B-toloc.city_name	atis_flight
+i would like to fly from pittsburgh to atlanta on us air at the latest time possible in the evening	O O O O O O B-fromloc.city_name O B-toloc.city_name O B-airline_name I-airline_name O O B-flight_mod I-flight_mod I-flight_mod O O B-depart_time.period_of_day	atis_flight
+show me all flights from dallas to pittsburgh which leave on monday after 8 o'clock am	O O O O O B-fromloc.city_name O B-toloc.city_name O O O B-depart_date.day_name B-depart_time.time_relative B-depart_time.time I-depart_time.time I-depart_time.time	atis_flight
+are there any nonstop flights leaving from denver arriving in baltimore on july seventh	O O O B-flight_stop O O O B-fromloc.city_name O O B-toloc.city_name O B-arrive_date.month_name B-arrive_date.day_number	atis_flight
+list round trip flights between boston and oakland using twa	O B-round_trip I-round_trip O O B-fromloc.city_name O B-toloc.city_name O B-airline_code	atis_flight
+what are the sunday flights from oakland to washington dc	O O O B-depart_date.day_name O O B-fromloc.city_name O B-toloc.city_name B-toloc.state_code	atis_flight
+what flights are there on sunday from seattle to minneapolis	O O O O O B-depart_date.day_name O B-fromloc.city_name O B-toloc.city_name	atis_flight
+what flights from las vegas to montreal on saturday	O O O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name O B-depart_date.day_name	atis_flight
+what is the fare on continental 271 from dallas to san francisco	O O O O O B-airline_name B-flight_number O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name	atis_airfare
+show me flights denver to washington dc on thursday	O O O B-fromloc.city_name O B-toloc.city_name B-toloc.state_code O B-depart_date.day_name	atis_flight
+what type of ground transportation is available at philadelphia airport	O O O O O O O O B-airport_name I-airport_name	atis_ground_service
+flights from phoenix to milwaukee on wednesday evening	O O B-fromloc.city_name O B-toloc.city_name O B-depart_date.day_name B-depart_time.period_of_day	atis_flight
+show me the last flight from love field	O O O B-flight_mod O O B-fromloc.airport_name I-fromloc.airport_name	atis_flight
+can you list all flights that depart from orlando to kansas city	O O O O O O O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name	atis_flight
+i want to fly from kansas city to chicago next wednesday arriving in the evening and returning the next day	O O O O O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name B-depart_date.date_relative B-depart_date.day_name O O O B-arrive_time.period_of_day O O O B-return_date.date_relative O	atis_flight
+what is the ground transportation available in the city of fort worth	O O O O O O O O O O B-city_name I-city_name	atis_ground_service
+i need a flight from baltimore to seattle that stops in minneapolis	O O O O O B-fromloc.city_name O B-toloc.city_name O O O B-stoploc.city_name	atis_flight
+what is the latest flight you have departing dallas to philadelphia	O O O B-flight_mod O O O O B-fromloc.city_name O B-toloc.city_name	atis_flight
+show me the flights from atlanta to philadelphia	O O O O O B-fromloc.city_name O B-toloc.city_name	atis_flight
+show me the flights arriving at love field from other airports	O O O O O O B-toloc.airport_name I-toloc.airport_name O O O	atis_flight
+what does ewr stand for	O O B-airport_code O O	atis_abbreviation
+what flights from denver to salt lake city	O O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name I-toloc.city_name	atis_flight
+please give me the flight times the morning on united airlines for september twentieth from philadelphia to san francisco	O O O O B-flight_time I-flight_time O B-depart_time.period_of_day O B-airline_name I-airline_name O B-depart_date.month_name B-depart_date.day_number O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name	atis_flight_time
+what is the earliest arrival in salt lake city of a flight from toronto	O O O B-flight_mod O O B-toloc.city_name I-toloc.city_name I-toloc.city_name O O O O B-fromloc.city_name	atis_flight
+i'd like to see all the flights from boston to philadelphia	O O O O O O O O B-fromloc.city_name O B-toloc.city_name	atis_flight
+what is fare code c	O O O O B-fare_basis_code	atis_abbreviation
+what kind of aircraft does delta fly before 8 am on august second from boston to denver	O O O O O B-airline_name O B-depart_time.time_relative B-depart_time.time I-depart_time.time O B-depart_date.month_name B-depart_date.day_number O B-fromloc.city_name O B-toloc.city_name	atis_aircraft
+flight from denver to san francisco in the afternoon	O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name O O B-depart_time.period_of_day	atis_flight
+what is the first flight from boston to stapleton airport for tomorrow	O O O B-flight_mod O O B-fromloc.city_name O B-toloc.airport_name I-toloc.airport_name O B-depart_date.today_relative	atis_flight
+i need to know what flights leave atlanta on sunday evening and arrive in baltimore	O O O O O O O B-fromloc.city_name O B-depart_date.day_name B-depart_time.period_of_day O O O B-toloc.city_name	atis_flight
+what are the flights from milwaukee to orlando on wednesday	O O O O O B-fromloc.city_name O B-toloc.city_name O B-depart_date.day_name	atis_flight
+what is the cheapest fare between denver and boston	O O O B-cost_relative O O B-fromloc.city_name O B-toloc.city_name	atis_airfare
+what airlines have business class	O O O B-class_type I-class_type	atis_airline
+i need a flight from san francisco to pittsburgh and then pittsburgh to new york and new york to san francisco	O O O O O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name I-toloc.city_name	atis_flight
+what flights are there between washington dc and san francisco leaving washington after 6 pm on wednesday	O O O O O B-fromloc.city_name B-fromloc.state_code O B-toloc.city_name I-toloc.city_name O B-fromloc.city_name B-depart_time.time_relative B-depart_time.time I-depart_time.time O B-depart_date.day_name	atis_flight
+what type of aircraft does eastern fly from atlanta to denver before 6 pm	O O O O O B-airline_name O O B-fromloc.city_name O B-toloc.city_name B-depart_time.time_relative B-depart_time.time I-depart_time.time	atis_aircraft
+i would like the flights available from boston to denver arriving in denver on 9 o'clock wednesday morning on or by 9 o'clock wednesday morning	O O O O O O O B-fromloc.city_name O B-toloc.city_name O O B-toloc.city_name O B-arrive_time.time I-arrive_time.time B-arrive_date.day_name B-arrive_time.period_of_day O B-or B-arrive_time.time_relative B-arrive_time.time I-arrive_time.time B-arrive_date.day_name B-arrive_time.period_of_day	atis_flight
+what ground transportation is available at the baltimore airport	O O O O O O O B-airport_name I-airport_name	atis_ground_service
+show me flights from atlanta to baltimore denver and dallas	O O O O B-fromloc.city_name O B-toloc.city_name B-toloc.city_name O B-toloc.city_name	atis_flight
+what flights are there from minneapolis to chicago	O O O O O B-fromloc.city_name O B-toloc.city_name	atis_flight
+flights from denver to pittsburgh on thursday	O O B-fromloc.city_name O B-toloc.city_name O B-depart_date.day_name	atis_flight
+may i have a list of flights going from boston to denver on the twenty ninth of july	O O O O O O O O O B-fromloc.city_name O B-toloc.city_name O O B-depart_date.day_number I-depart_date.day_number O B-depart_date.month_name	atis_flight
+what flights are there between nashville and st. louis which are nonstop and arrive after noon and before 8 pm	O O O O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name O O B-flight_stop O O B-arrive_time.time_relative B-arrive_time.time O B-arrive_time.time_relative B-arrive_time.time I-arrive_time.time	atis_flight
+please list the flight times for boston to pittsburgh	O O O B-flight_time I-flight_time O B-fromloc.city_name O B-toloc.city_name	atis_flight_time
+flight leaving from oakland to salt lake city	O O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name I-toloc.city_name	atis_flight
+what are the different classes that an airline offers	O O O O O O O O O	atis_flight
+could you tell me if there is ground transportation between the boston airport and boston downtown	O O O O O O O O O O O B-fromloc.airport_name I-fromloc.airport_name O B-toloc.city_name O	atis_ground_service
+ground transportation denver	O O B-city_name	atis_ground_service
+what are the prices of the flights from atlanta to dallas in the morning	O O O O O O O O B-fromloc.city_name O B-toloc.city_name O O B-depart_time.period_of_day	atis_airfare
+how long does it take to fly from boston to atlanta	O O O O O O O O B-fromloc.city_name O B-toloc.city_name	atis_distance
+please list the friday afternoon flights from san jose to dallas on american airlines	O O O B-depart_date.day_name B-depart_time.period_of_day O O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name O B-airline_name I-airline_name	atis_flight
+is there an american airlines flight in the evening from dallas to san francisco	O O O B-airline_name I-airline_name O O O B-depart_time.period_of_day O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name	atis_flight
+what ground transportation is available in denver	O O O O O O B-city_name	atis_ground_service
+show me the fares from dallas to san francisco	O O O O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name	atis_airfare
+in pittsburgh i'd like to rent a car	O B-city_name O O O O O B-transport_type	atis_ground_service
+i would like to find a flight that goes from tampa to montreal making a stop in new york and a flight that serves lunch	O O O O O O O O O O B-fromloc.city_name O B-toloc.city_name O O O O B-stoploc.city_name I-stoploc.city_name O O O O O B-meal_description	atis_flight
+please give me flights from atlanta to boston on wednesday afternoon and thursday morning	O O O O O B-fromloc.city_name O B-toloc.city_name O B-depart_date.day_name B-depart_time.period_of_day O B-depart_date.day_name B-depart_time.period_of_day	atis_flight
+can you list all flights leaving from st. louis and arriving in milwaukee	O O O O O O O B-fromloc.city_name I-fromloc.city_name O O O B-toloc.city_name	atis_flight
+flights from montreal to las vegas	O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name	atis_flight
+give me the flights from chicago to seattle on saturday morning	O O O O O B-fromloc.city_name O B-toloc.city_name O B-depart_date.day_name B-depart_time.period_of_day	atis_flight
+what is airline nw	O O O B-airline_code	atis_airline
+i need a flight tonight from charlotte to las vegas with a stop in st. louis and i want dinner	O O O O B-depart_date.today_relative O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name O O O O B-stoploc.city_name I-stoploc.city_name O O O B-meal_description	atis_flight
+what's the latest flight out of denver that arrives in pittsburgh next monday	O O B-flight_mod O O O B-fromloc.city_name O O O B-toloc.city_name B-arrive_date.date_relative B-arrive_date.day_name	atis_flight
+please list the flights taking off and landing on general mitchell international airport	O O O O O O O O O B-fromloc.airport_name I-fromloc.airport_name I-fromloc.airport_name I-fromloc.airport_name	atis_flight
+what limousine service is in boston	O B-transport_type O O O B-city_name	atis_ground_service
+what is fare code y mean	O O O O B-fare_basis_code O	atis_abbreviation
+are there delta flights leaving denver	O O B-airline_name O O B-fromloc.city_name	atis_flight
+on thursday i'd like a flight from st. petersburg to miami	O B-depart_date.day_name O O O O O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name	atis_flight
+when do planes leave boston for	O O O O B-fromloc.city_name O	atis_flight
+what flights are there wednesday morning from atlanta to philadelphia	O O O O B-depart_date.day_name B-depart_time.period_of_day O B-fromloc.city_name O B-toloc.city_name	atis_flight
+show me all flights from san francisco to boston philadelphia or baltimore	O O O O O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name B-toloc.city_name O B-toloc.city_name	atis_flight
+what type of aircraft is used on the first flight from philadelphia to dallas in the morning	O O O O O O O O B-flight_mod O O B-fromloc.city_name O B-toloc.city_name O O B-depart_time.period_of_day	atis_aircraft
+what are the flights from pittsburgh to oakland	O O O O O B-fromloc.city_name O B-toloc.city_name	atis_flight
+list the morning flights at a 124 dollars from atlanta to boston	O O B-depart_time.period_of_day O O O B-fare_amount I-fare_amount O B-fromloc.city_name O B-toloc.city_name	atis_flight
+all flights from miami to new york	O O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name	atis_flight
+show flights from denver to oakland	O O O B-fromloc.city_name O B-toloc.city_name	atis_flight
+show flights from philadelphia to san francisco	O O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name	atis_flight
+i'd like a flight tomorrow late from nashville to houston with dinner please	O O O O B-depart_date.today_relative B-depart_time.period_mod O B-fromloc.city_name O B-toloc.city_name O B-meal_description O	atis_flight
+show me all prices of economy from baltimore to dallas	O O O O O B-economy O B-fromloc.city_name O B-toloc.city_name	atis_airfare
+i need a flight from montreal quebec to san diego california leaving this sunday	O O O O O B-fromloc.city_name B-fromloc.state_name O B-toloc.city_name I-toloc.city_name B-toloc.state_name O B-depart_date.date_relative B-depart_date.day_name	atis_flight
+show me the cheapest one way flight from san francisco to boston leaving san francisco after 9 pm	O O O B-cost_relative B-round_trip I-round_trip O O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name O B-fromloc.city_name I-fromloc.city_name B-depart_time.time_relative B-depart_time.time I-depart_time.time	atis_flight
+does united airlines have flights between boston and denver	O B-airline_name I-airline_name O O O B-fromloc.city_name O B-toloc.city_name	atis_flight
+i would like to fly us air from orlando to cleveland in the late evening what do you have available	O O O O O B-airline_name I-airline_name O B-fromloc.city_name O B-toloc.city_name O O B-depart_time.period_mod B-depart_time.period_of_day O O O O O	atis_flight
+what are the flights from milwaukee to orlando on wednesday night	O O O O O B-fromloc.city_name O B-toloc.city_name O B-depart_date.day_name B-depart_time.period_of_day	atis_flight
+show me the flights from newark to los angeles	O O O O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name	atis_flight
+can you give me the evening flight on wednesday from washington to atlanta again	O O O O O B-depart_time.period_of_day O O B-depart_date.day_name O B-fromloc.city_name O B-toloc.city_name O	atis_flight
+what are the flights and prices from la to charlotte for monday morning	O O O O O O O B-fromloc.city_name O B-toloc.city_name O B-depart_date.day_name B-depart_time.period_of_day	atis_flight
+what first class flights are available on july twenty fifth 1991 from denver to baltimore	O B-class_type I-class_type O O O O B-depart_date.month_name B-depart_date.day_number I-depart_date.day_number B-depart_date.year O B-fromloc.city_name O B-toloc.city_name	atis_flight
+show me all flights from pittsburgh to baltimore tomorrow which serve a meal	O O O O O B-fromloc.city_name O B-toloc.city_name B-depart_date.today_relative O O O B-meal	atis_flight
+show me all the flights between philadelphia and denver	O O O O O O B-fromloc.city_name O B-toloc.city_name	atis_flight
+flights from phoenix to newark	O O B-fromloc.city_name O B-toloc.city_name	atis_flight
+all flights from pittsburgh to dallas round trip after 12 pm less than 100	O O O B-fromloc.city_name O B-toloc.city_name B-round_trip I-round_trip B-depart_time.time_relative B-depart_time.time I-depart_time.time B-cost_relative O B-fare_amount	atis_flight
+thanks and what's the last flight back from washington to boston	O O O O B-flight_mod O O O B-fromloc.city_name O B-toloc.city_name	atis_flight
+show me the flights from boston to baltimore	O O O O O B-fromloc.city_name O B-toloc.city_name	atis_flight
+what does fare code q mean	O O O O B-fare_basis_code O	atis_abbreviation
+show me the flights arriving in baltimore from philadelphia at about 4 o'clock	O O O O O O B-toloc.city_name O B-fromloc.city_name O B-arrive_time.time_relative B-arrive_time.time I-arrive_time.time	atis_flight
+what is the cheapest fare from baltimore to dallas in any class	O O O B-cost_relative O O B-fromloc.city_name O B-toloc.city_name O O O	atis_airfare
+give me all nonstops from new york to vegas that arrive on a sunday	O O O B-flight_stop O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name O O O O B-arrive_date.day_name	atis_flight
+what is sa	O O B-days_code	atis_abbreviation
+show me the flights from boston to san francisco	O O O O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name	atis_flight
+what does fare code qo mean	O O O O B-fare_basis_code O	atis_abbreviation
+i need information on flights leaving dallas arriving in boston leaving dallas early in the morning	O O O O O O B-fromloc.city_name O O B-toloc.city_name O B-fromloc.city_name B-depart_time.period_mod O O B-depart_time.period_of_day	atis_flight
+what is the earliest flight on thursday from atlanta to washington dc	O O O B-flight_mod O O B-depart_date.day_name O B-fromloc.city_name O B-toloc.city_name B-toloc.state_code	atis_flight
+what flights are available saturday to san francisco from dallas	O O O O B-depart_date.day_name O B-toloc.city_name I-toloc.city_name O B-fromloc.city_name	atis_flight
+i'd like to fly from boston to san francisco	O O O O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name	atis_flight
+how many flights does american airlines have from boston to atlanta	O O O O B-airline_name I-airline_name O O B-fromloc.city_name O B-toloc.city_name	atis_quantity
+does midwest express have any flights from montreal to nashville	O B-airline_name O O O O O B-fromloc.city_name O B-toloc.city_name	atis_flight
+show me all economy prices from dallas to baltimore	O O O B-economy O O B-fromloc.city_name O B-toloc.city_name	atis_airfare
+and how much does it cost to travel from boston airport to downtown	O O O O O O O O O B-fromloc.airport_name I-fromloc.airport_name O O	atis_airfare
+all flights before 10 am boston denver	O O B-depart_time.time_relative B-depart_time.time I-depart_time.time B-fromloc.city_name B-fromloc.city_name	atis_flight
+show me the flights that go from san diego to newark with one stop in houston	O O O O O O O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name O B-flight_stop I-flight_stop O B-stoploc.city_name	atis_flight
+show me the earliest flight on wednesday from baltimore to newark	O O O B-flight_mod O O B-depart_date.day_name O B-fromloc.city_name O B-toloc.city_name	atis_flight
+i'd like to book the cheapest one way flight from pittsburgh to atlanta on july twentieth	O O O O O B-cost_relative B-round_trip I-round_trip O O B-fromloc.city_name O B-toloc.city_name O B-depart_date.month_name B-depart_date.day_number	atis_flight
+what does mco mean	O O B-airport_code O	atis_abbreviation
+show me all the flights from charlotte to cleveland	O O O O O O B-fromloc.city_name O B-toloc.city_name	atis_flight
+do you have a flight from salt lake city to st. petersburg	O O O O O O B-fromloc.city_name I-fromloc.city_name I-fromloc.city_name O B-toloc.city_name I-toloc.city_name	atis_flight
+what is the earliest flight from boston to atlanta	O O O B-flight_mod O O B-fromloc.city_name O B-toloc.city_name	atis_flight
+i'd like a flight tomorrow from kansas city to newark in the morning	O O O O B-depart_date.today_relative O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name O O B-depart_time.period_of_day	atis_flight
+show me all flights from boston to detroit	O O O O O B-fromloc.city_name O B-toloc.city_name	atis_flight
+show me the flights arriving in baltimore on june fifteenth leaving either from denver or dallas	O O O O O O B-toloc.city_name O B-arrive_date.month_name B-arrive_date.day_number O O O B-fromloc.city_name B-or B-fromloc.city_name	atis_flight
+show me the flights from love field to other airports	O O O O O B-fromloc.airport_name I-fromloc.airport_name O O O	atis_flight
+what is the earliest flight i can get from baltimore to boston	O O O B-flight_mod O O O O O B-fromloc.city_name O B-toloc.city_name	atis_flight
+what is the round trip thrift fare on us air from boston to san francisco	O O O B-round_trip I-round_trip B-class_type O O B-airline_name I-airline_name O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name	atis_airfare
+show me flights from los angeles to pittsburgh on monday evening	O O O O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name O B-depart_date.day_name B-depart_time.period_of_day	atis_flight
+i would like a flight from atlanta to denver	O O O O O O B-fromloc.city_name O B-toloc.city_name	atis_flight
+give me all the flights from memphis to charlotte	O O O O O O B-fromloc.city_name O B-toloc.city_name	atis_flight
+from philadelphia to toronto	O B-fromloc.city_name O B-toloc.city_name	atis_flight
+newark to cleveland	B-fromloc.city_name O B-toloc.city_name	atis_flight
+list all american airline flights which leave phoenix on wednesday and stop at milwaukee	O O B-airline_name I-airline_name O O O B-fromloc.city_name O B-depart_date.day_name O O O B-stoploc.city_name	atis_flight
+show me all flights from pittsburgh to baltimore tomorrow	O O O O O B-fromloc.city_name O B-toloc.city_name B-depart_date.today_relative	atis_flight
+is there a direct flight from denver to pittsburgh in the morning of august thirty first that is nonstop	O O O B-connect O O B-fromloc.city_name O B-toloc.city_name O O B-depart_time.period_of_day O B-depart_date.month_name B-depart_date.day_number I-depart_date.day_number O O B-flight_stop	atis_flight
+which airline offers the cheapest rate going from dallas to baltimore on july fourth	O O O O B-cost_relative O O O B-fromloc.city_name O B-toloc.city_name O B-depart_date.month_name B-depart_date.day_number	atis_airline
+does midwest express serve charlotte	O B-airline_name O O B-city_name	atis_flight
+show me all the flights from philadelphia to san francisco	O O O O O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name	atis_flight
+ground transportation in denver	O O O B-city_name	atis_ground_service
+show me all flights from boston to dallas fort worth both direct and connecting that arrive before noon	O O O O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name I-toloc.city_name O O O O O O B-arrive_time.time_relative B-arrive_time.time	atis_flight
+show flights from philadelphia to dallas on saturday	O O O B-fromloc.city_name O B-toloc.city_name O B-depart_date.day_name	atis_flight
+and flights leaving from atlanta to oakland leaving after 5 pm	O O O O B-fromloc.city_name O B-toloc.city_name O B-depart_time.time_relative B-depart_time.time I-depart_time.time	atis_flight
+okay and on may four i would like to go from atlanta to denver leaving early in the morning around 8	O O O B-depart_date.month_name B-depart_date.day_number O O O O O O B-fromloc.city_name O B-toloc.city_name O B-depart_time.period_mod O O B-depart_time.period_of_day B-depart_time.time_relative B-depart_time.time	atis_flight
+all flights from boston to washington dc on november eleventh	O O O B-fromloc.city_name O B-toloc.city_name B-toloc.state_code O B-depart_date.month_name B-depart_date.day_number	atis_flight
+what are the early morning flights from boston to denver	O O O B-depart_time.period_of_day B-depart_time.period_of_day O O B-fromloc.city_name O B-toloc.city_name	atis_flight
+what is the cheapest flight from denver to pittsburgh leaving on september twenty eighth	O O O B-cost_relative O O B-fromloc.city_name O B-toloc.city_name O O B-depart_date.month_name B-depart_date.day_number I-depart_date.day_number	atis_flight
+flight from dallas to oakland california on monday	O O B-fromloc.city_name O B-toloc.city_name B-toloc.state_name O B-depart_date.day_name	atis_flight
+i would like to fly from dallas to san francisco on saturday and arrive in san francisco before 4 pm	O O O O O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name O B-depart_date.day_name O O O B-toloc.city_name I-toloc.city_name B-arrive_time.time_relative B-arrive_time.time I-arrive_time.time	atis_flight
+morning flights out of san francisco arriving boston afternoon	B-depart_time.period_of_day O O O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name B-arrive_time.period_of_day	atis_flight
+i'd like to see flights from baltimore to atlanta that arrive before noon	O O O O O O B-fromloc.city_name O B-toloc.city_name O O B-arrive_time.time_relative B-arrive_time.time	atis_flight
+find me the earliest boston departure for atlanta and the lastest return trip from atlanta so that i can be in atlanta the longest amount of time but return to boston the same day	O O O B-flight_mod B-fromloc.city_name O O B-toloc.city_name O O B-flight_mod O O O B-fromloc.city_name O O O O O O B-toloc.city_name O O O O O O O O B-toloc.city_name O O B-return_date.date_relative	atis_flight
+please give me the cheapest round trip airfare from atlanta to philadelphia on august the first	O O O O B-cost_relative B-round_trip I-round_trip O O B-fromloc.city_name O B-toloc.city_name O B-depart_date.month_name O B-depart_date.day_number	atis_airfare
+i would like information on flights from philadelphia to oakland california on friday afternoon	O O O O O O O B-fromloc.city_name O B-toloc.city_name B-toloc.state_name O B-depart_date.day_name B-depart_time.period_of_day	atis_flight
+what afternoon flights are available from pittsburgh to atlanta on a weekday	O B-depart_time.period_of_day O O O O B-fromloc.city_name O B-toloc.city_name O O B-flight_mod	atis_flight
+show ground transportation in denver	O O O O B-city_name	atis_ground_service
+please show me airlines with flights from denver to boston with stop in philadelphia	O O O O O O O B-fromloc.city_name O B-toloc.city_name O O O B-stoploc.city_name	atis_airline
+dallas to baltimore	B-fromloc.city_name O B-toloc.city_name	atis_flight
+rental cars in washington dc	B-transport_type I-transport_type O B-city_name B-state_code	atis_ground_service
+does american airlines fly to san francisco from atlanta	O B-airline_name I-airline_name O O B-toloc.city_name I-toloc.city_name O B-fromloc.city_name	atis_flight
+kindly give me the type of aircraft used to fly from atlanta to denver	O O O O O O O O O O O B-fromloc.city_name O B-toloc.city_name	atis_aircraft
+give me flights from denver to baltimore	O O O O B-fromloc.city_name O B-toloc.city_name	atis_flight
+what is fare class h	O O O O B-fare_basis_code	atis_abbreviation
+what is the earliest flight from washington to san francisco on friday that serves breakfast	O O O B-flight_mod O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name O B-depart_date.day_name O O B-meal_description	atis_flight
+what flights are there from atlanta to washington early on thursday mornings	O O O O O B-fromloc.city_name O B-toloc.city_name B-depart_time.period_mod O B-depart_date.day_name B-depart_time.period_of_day	atis_flight
+what kind of ground transportation is there in dallas	O O O O O O O O B-city_name	atis_ground_service
+could i have a list of flights in first class on monday from san francisco to pittsburgh starting at noon and afterwards	O O O O O O O O B-class_type I-class_type O B-depart_date.day_name O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name O O B-depart_time.time O B-depart_time.time_relative	atis_flight
+how much is a us air boston to pittsburgh daily nonstop flight	O O O O B-airline_name I-airline_name B-fromloc.city_name O B-toloc.city_name B-flight_days B-flight_stop O	atis_airfare
+i'd like to go from boston to atlanta sometime after 5 pm can you tell me the flights that could do that for me	O O O O O B-fromloc.city_name O B-toloc.city_name O B-depart_time.time_relative B-depart_time.time I-depart_time.time O O O O O O O O O O O O	atis_flight
+what's fare code yn	O O O B-fare_basis_code	atis_abbreviation
+airports in new york	O O B-city_name I-city_name	atis_airport
+i'd like to arrange for two friends to fly into los angeles next saturday evening one of the people is coming from kansas city and the other is coming from las vegas	O O O O O O O O O O B-toloc.city_name I-toloc.city_name B-arrive_date.date_relative B-arrive_date.day_name B-arrive_time.period_of_day O O O O O O O B-fromloc.city_name I-fromloc.city_name O O O O O O B-fromloc.city_name I-fromloc.city_name	atis_flight
+show me all overnight flights from washington dc to san francisco and list their fares	O O O B-flight_mod O O B-fromloc.city_name B-fromloc.state_code O B-toloc.city_name I-toloc.city_name O O O O	atis_flight
+what ground transportation is there in atlanta	O O O O O O B-city_name	atis_ground_service
+flights from pittsburgh to baltimore arriving between 4 and 5 pm	O O B-fromloc.city_name O B-toloc.city_name O O B-arrive_time.start_time O B-arrive_time.end_time I-arrive_time.end_time	atis_flight
+what does fare code qw mean	O O O O B-fare_basis_code O	atis_abbreviation
+show flights from new york city to las vegas	O O O B-fromloc.city_name I-fromloc.city_name I-fromloc.city_name O B-toloc.city_name I-toloc.city_name	atis_flight
+i need information for ground transportation denver colorado	O O O O O O B-city_name B-state_name	atis_ground_service
+list the flight from philadelphia to san francisco on american airlines	O O O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name O B-airline_name I-airline_name	atis_flight
+show me the airlines for flights to or from love field	O O O O O O O O O B-fromloc.airport_name I-fromloc.airport_name	atis_airline
+list nonstop flights from san francisco to oakland that depart in the afternoon	O B-flight_stop O O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name O O O O B-arrive_time.period_of_day	atis_flight
+which airline serves denver pittsburgh and atlanta	O O O B-fromloc.city_name B-fromloc.city_name O B-fromloc.city_name	atis_airline
+how many first class flights does delta airlines have	O O B-class_type I-class_type O O B-airline_name I-airline_name O	atis_quantity
+please show flights arriving in philadelphia from denver	O O O O O B-toloc.city_name O B-fromloc.city_name	atis_flight
+now show me the flights from pittsburgh to baltimore	O O O O O O B-fromloc.city_name O B-toloc.city_name	atis_flight
+show me flights from milwaukee to orlando on wednesday night or thursday morning	O O O O B-fromloc.city_name O B-toloc.city_name O B-depart_date.day_name B-depart_time.period_of_day B-or B-depart_date.day_name B-depart_time.period_of_day	atis_flight
+i would like to fly delta airlines from atlanta to pittsburgh	O O O O O B-airline_name I-airline_name O B-fromloc.city_name O B-toloc.city_name	atis_flight
+what is fare code f	O O O O B-fare_basis_code	atis_abbreviation
+what are the flights for united airlines on september twentieth in the morning	O O O O O B-airline_name I-airline_name O B-depart_date.month_name B-depart_date.day_number O O B-depart_time.period_of_day	atis_flight
+show all airlines with flights between denver and dallas	O O O O O O B-fromloc.city_name O B-toloc.city_name	atis_airline
+cheapest fare from nashville to seattle	B-cost_relative O O B-fromloc.city_name O B-toloc.city_name	atis_airfare
+how many flights does american airlines have with a class of service code f	O O O O B-airline_name I-airline_name O O O O O O O B-fare_basis_code	atis_quantity
+find a nonstop flight between boston and washington arriving in washington around 5 pm	O O B-flight_stop O O B-fromloc.city_name O B-toloc.city_name O O B-toloc.city_name B-arrive_time.time_relative B-arrive_time.time I-arrive_time.time	atis_flight
+pittsburgh to baltimore please on january one	B-fromloc.city_name O B-toloc.city_name O O B-depart_date.month_name B-depart_date.day_number	atis_flight
+show me the costs and times for flights from san francisco to atlanta	O O O O O B-flight_time O O O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name	atis_airfare#atis_flight_time
+what airlines fly from boston to denver	O O O O B-fromloc.city_name O B-toloc.city_name	atis_airline
+what ground transportation is there in atlanta	O O O O O O B-city_name	atis_ground_service
+how far from the airport in the dallas fort worth airport is dallas	O O O O O O O B-fromloc.airport_name I-fromloc.airport_name I-fromloc.airport_name I-fromloc.airport_name O B-fromloc.city_name	atis_distance
+list all flights from tampa florida to miami that are the cheapest one way	O O O O B-fromloc.city_name B-fromloc.state_name O B-toloc.city_name O O O B-cost_relative B-round_trip I-round_trip	atis_flight
+show me the flights from philadelphia to baltimore	O O O O O B-fromloc.city_name O B-toloc.city_name	atis_flight
+ground transportation in denver	O O O B-city_name	atis_ground_service
+please list all flights from atlanta to baltimore on wednesday and thursday	O O O O O B-fromloc.city_name O B-toloc.city_name O B-depart_date.day_name O B-depart_date.day_name	atis_flight
+does flight dl 1083 from philadelphia to denver fly on saturdays	O O B-airline_code B-flight_number O B-fromloc.city_name O B-toloc.city_name O O B-depart_date.day_name	atis_flight
+i would like to book a flight going from tampa to seattle on may twenty sixth i would like to stop in milwaukee on the way	O O O O O O O O O B-fromloc.city_name O B-toloc.city_name O B-depart_date.month_name B-depart_date.day_number I-depart_date.day_number O O O O O O B-stoploc.city_name O O O	atis_flight
+i want to fly from boston to atlanta i would like the cheapest fare please	O O O O O B-fromloc.city_name O B-toloc.city_name O O O O B-cost_relative O O	atis_flight
+show me the flights from montreal to philly	O O O O O B-fromloc.city_name O B-toloc.city_name	atis_flight
+what flights are available sunday afternoon from oakland to dallas	O O O O B-depart_date.day_name B-depart_time.period_of_day O B-fromloc.city_name O B-toloc.city_name	atis_flight
+explain the restriction ap 80	O O O B-restriction_code I-restriction_code	atis_abbreviation
+i want to go from baltimore to san francisco with a stopover in denver	O O O O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name O O O O B-stoploc.city_name	atis_flight
+information on a flight from san francisco to philadelphia	O O O O O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name	atis_flight
+shortest morning flights from cincinnati to tampa	B-flight_mod B-depart_time.period_of_day O O B-fromloc.city_name O B-toloc.city_name	atis_flight
+what are the flights from boston to washington on october fifteenth 1991	O O O O O B-fromloc.city_name O B-toloc.city_name O B-depart_date.month_name B-depart_date.day_number B-depart_date.year	atis_flight
+what flights are there on wednesday evening from denver to sfo	O O O O O B-depart_date.day_name B-depart_time.period_of_day O B-fromloc.city_name O B-toloc.airport_code	atis_flight
+show me a list of flights on american airlines from boston to dc on july twenty second	O O O O O O O B-airline_name I-airline_name O B-fromloc.city_name O B-toloc.state_code O B-depart_date.month_name B-depart_date.day_number I-depart_date.day_number	atis_flight
+us air 269 leaving boston at 428 what is the arrival time in baltimore	B-airline_name I-airline_name B-flight_number O B-fromloc.city_name O B-depart_time.time O O O B-flight_time I-flight_time O B-toloc.city_name	atis_flight
+i would like information on flights leaving early monday morning from atlanta to baltimore	O O O O O O O B-depart_time.period_mod B-depart_date.day_name B-depart_time.period_of_day O B-fromloc.city_name O B-toloc.city_name	atis_flight
+now show me the flights from memphis to cleveland	O O O O O O B-fromloc.city_name O B-toloc.city_name	atis_flight
+what flights leave from nashville to phoenix	O O O O B-fromloc.city_name O B-toloc.city_name	atis_flight
+show me the air fare for the flights from baltimore to dallas	O O O O O O O O O B-fromloc.city_name O B-toloc.city_name	atis_airfare
+what are the flights from denver to san francisco	O O O O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name	atis_flight
+which airlines go from san francisco to washington by way of indianapolis	O O O O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name O O O B-stoploc.city_name	atis_airline
+all flights from washington dc to san francisco on november twelfth	O O O B-fromloc.city_name B-fromloc.state_code O B-toloc.city_name I-toloc.city_name O B-depart_date.month_name B-depart_date.day_number	atis_flight
+round trip fares from pittsburgh to philadelphia under 1000 dollars	B-round_trip I-round_trip O O B-fromloc.city_name O B-toloc.city_name B-cost_relative B-fare_amount I-fare_amount	atis_airfare
+show nonstop flights from new york to miami on a tuesday which cost less than 466 dollars one way	O B-flight_stop O O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name O O B-arrive_date.day_name O O B-cost_relative O B-fare_amount I-fare_amount B-round_trip I-round_trip	atis_flight
+i'd like flights on american airlines from philadelphia to dallas arriving before 1145 am	O O O O B-airline_name I-airline_name O B-fromloc.city_name O B-toloc.city_name O B-arrive_time.time_relative B-arrive_time.time I-arrive_time.time	atis_flight
+show business class fares from san francisco to denver on united airlines	O B-class_type I-class_type O O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name O B-airline_name I-airline_name	atis_airfare
+what is the earliest flight between logan and bwi	O O O B-flight_mod O O B-fromloc.airport_name O B-toloc.airport_code	atis_flight
+describe pittsburgh airport	O B-airport_name I-airport_name	atis_airport
+show flights on us air from pittsburgh to oakland connecting through denver	O O O B-airline_name I-airline_name O B-fromloc.city_name O B-toloc.city_name B-connect O B-stoploc.city_name	atis_flight
+list all nonstop flights on tuesday before noon from charlotte to baltimore	O O B-flight_stop O O B-arrive_date.day_name B-arrive_time.time_relative B-arrive_time.time O B-fromloc.city_name O B-toloc.city_name	atis_flight
+minneapolis to phoenix on monday	B-fromloc.city_name O B-toloc.city_name O B-depart_date.day_name	atis_flight
+please list me the flights and their cost of all airlines flying from denver to baltimore	O O O O O O O O O O O O O B-fromloc.city_name O B-toloc.city_name	atis_flight#atis_airfare
+what airline uses the code hp	O O O O O B-airline_code	atis_airline
+find a flight from san francisco to boston on wednesday	O O O O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name O B-depart_date.day_name	atis_flight
+could you tell me about ground transportation arrangements from the dallas airport to downtown dallas	O O O O O O O O O O B-fromloc.airport_name I-fromloc.airport_name O O B-toloc.city_name	atis_ground_service
+display all flights from pittsburgh to san francisco on august second	O O O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name O B-depart_date.month_name B-depart_date.day_number	atis_flight
+give me morning flights from charlotte to baltimore	O O B-depart_time.period_of_day O O B-fromloc.city_name O B-toloc.city_name	atis_flight
+anything from baltimore or washington with a stopover in denver going to san francisco	O O B-fromloc.city_name B-or B-fromloc.city_name O O O O B-stoploc.city_name O O B-toloc.city_name I-toloc.city_name	atis_flight
+show me flights from boston to denver	O O O O B-fromloc.city_name O B-toloc.city_name	atis_flight
+show me the flights from columbus to charlotte	O O O O O B-fromloc.city_name O B-toloc.city_name	atis_flight
+i need a flight from new york city to montreal thursday may six	O O O O O B-fromloc.city_name I-fromloc.city_name I-fromloc.city_name O B-toloc.city_name B-depart_date.day_name B-depart_date.month_name B-depart_date.day_number	atis_flight
+philadelphia to san francisco	B-fromloc.city_name O B-toloc.city_name I-toloc.city_name	atis_flight
+what is the earliest flight from boston to san francisco	O O O B-flight_mod O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name	atis_flight
+is there a limousine service available from the pittsburgh airport	O O O B-transport_type O O O O B-fromloc.airport_name I-fromloc.airport_name	atis_ground_service
+boston ground transportation	B-city_name O O	atis_ground_service
+the earliest flight from boston to san francisco please that will be serving a meal	O B-flight_mod O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name O O O O O O B-meal	atis_flight
+what does code qw mean	O O O B-fare_basis_code O	atis_abbreviation
+what airline is hp	O O O B-airline_code	atis_airline
+what are the costs of car rental in dallas	O O O O O B-transport_type I-transport_type O B-city_name	atis_ground_fare
+show me the flights leaving saturday or sunday from milwaukee to phoenix	O O O O O B-depart_date.day_name B-or B-depart_date.day_name O B-fromloc.city_name O B-toloc.city_name	atis_flight
+i'm interested in a flight from pittsburgh to atlanta	O O O O O O B-fromloc.city_name O B-toloc.city_name	atis_flight
+flights from kansas city to cleveland on wednesday	O O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name O B-depart_date.day_name	atis_flight
+is there a nonstop flight from denver to san francisco	O O O B-flight_stop O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name	atis_flight
+display all flights from san francisco to boston on august eighth	O O O O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name O B-depart_date.month_name B-depart_date.day_number	atis_flight
+which airlines have flights between philadelphia and pittsburgh	O O O O O B-fromloc.city_name O B-toloc.city_name	atis_airline
+i want to go from boston to atlanta on monday	O O O O O B-fromloc.city_name O B-toloc.city_name O B-depart_date.day_name	atis_flight
+what is the next flight from pittsburgh to san francisco after delta flight 1059	O O O B-flight_mod O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name B-mod B-airline_name O B-flight_number	atis_flight
+show me the least expensive flight from miami to cleveland on sunday after noon	O O O B-cost_relative I-cost_relative O O B-fromloc.city_name O B-toloc.city_name O B-depart_date.day_name B-depart_time.time_relative B-depart_time.time	atis_flight
+what type of aircraft is used flying from atlanta to denver before 12 noon	O O O O O O O O B-fromloc.city_name O B-toloc.city_name B-depart_time.time_relative B-depart_time.time I-depart_time.time	atis_aircraft
+show me all flights from boston to atlanta which leave atlanta after noon tomorrow	O O O O O B-fromloc.city_name O B-toloc.city_name O O B-fromloc.city_name B-depart_time.time_relative B-depart_time.time B-depart_date.today_relative	atis_flight
+how much does it cost to rent a car in tacoma	O O O O O O O O B-transport_type O B-city_name	atis_ground_fare
+what kind of airplane is flight ua 270 from denver to philadelphia	O O O O O O B-airline_code B-flight_number O B-fromloc.city_name O B-toloc.city_name	atis_aircraft
+list all flights from boston to atlanta before 5 o'clock am on thursday	O O O O B-fromloc.city_name O B-toloc.city_name B-depart_time.time_relative B-depart_time.time I-depart_time.time I-depart_time.time O B-depart_date.day_name	atis_flight
+i'd like the earliest flight from dallas to boston	O O O B-flight_mod O O B-fromloc.city_name O B-toloc.city_name	atis_flight
+show me the flights on delta from atlanta in the morning	O O O O O B-airline_name O B-fromloc.city_name O O B-depart_time.period_of_day	atis_flight
+what flights from salt lake city to las vegas	O O O B-fromloc.city_name I-fromloc.city_name I-fromloc.city_name O B-toloc.city_name I-toloc.city_name	atis_flight
+show me the list of flights between philadelphia and denver that leave in the afternoon	O O O O O O O B-fromloc.city_name O B-toloc.city_name O O O O B-depart_time.period_of_day	atis_flight
+what is the fare from atlanta to boston on coach one way	O O O O O B-fromloc.city_name O B-toloc.city_name O B-class_type B-round_trip I-round_trip	atis_airfare
+how many fares are there one way from tacoma to montreal	O O O O O B-round_trip I-round_trip O B-fromloc.city_name O B-toloc.city_name	atis_quantity
+i would like to know some information on flights leaving philadelphia arriving in pittsburgh in the afternoon	O O O O O O O O O O B-fromloc.city_name O O B-toloc.city_name O O B-arrive_time.period_of_day	atis_flight
+what flights are available from pittsburgh to boston on wednesday of next week	O O O O O B-fromloc.city_name O B-toloc.city_name O B-depart_date.day_name O B-depart_date.date_relative O	atis_flight
+is there a flight on continental airlines from boston to denver	O O O O O B-airline_name I-airline_name O B-fromloc.city_name O B-toloc.city_name	atis_flight
+pm flights dallas to atlanta	B-depart_time.period_of_day O B-fromloc.city_name O B-toloc.city_name	atis_flight
+information on flights from baltimore to philadelphia	O O O O B-fromloc.city_name O B-toloc.city_name	atis_flight
+what flights from atlanta to st. louis on tuesday arriving around 230 pm	O O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name O B-depart_date.day_name O B-arrive_time.time_relative B-arrive_time.time I-arrive_time.time	atis_flight
+show me ground transportation in san francisco	O O O O O B-city_name I-city_name	atis_ground_service
+what flights do you have from newark new jersey to ontario california that connect in phoenix	O O O O O O B-fromloc.city_name B-fromloc.state_name I-fromloc.state_name O B-toloc.city_name B-toloc.state_name O B-connect O B-stoploc.city_name	atis_flight
