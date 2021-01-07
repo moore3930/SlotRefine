@@ -652,7 +652,7 @@ class NatSLU(Model):
         while 1:
             step = step + 1
 
-            batch, iterator, last_batch = self.get_batch_np(batch_iter, valid_path, self.arg.batch_size)
+            batch, iterator, last_batch = self.get_batch_np(batch_iter, valid_path, 1000)
             batch_iter = iterator
             seq_in_ids, sequence_length, seq_out_ids, _, label_ids = self.batch_process(batch)
             first_pass_in_tags = np.ones(seq_in_ids.shape, dtype=np.int32) * self.o_idx
