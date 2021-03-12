@@ -7,7 +7,7 @@ Main paper to be cited ([Di Wu et al., 2020](https://www.aclweb.org/anthology/20
 @article{wu2020slotrefine,
   title={Slotrefine: A fast non-autoregressive model for joint intent detection and slot filling},
   author={Wu, Di and Ding, Liang and Lu, Fan and Xie, Jian},
-  journal={arXiv preprint arXiv:2010.02693},
+  booktitle={EMNLP},
   year={2020}
 }
 ```
