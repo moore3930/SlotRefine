@@ -549,16 +549,16 @@ class NatSLU(Model):
                 intent_losses.append(intent_loss)
 
                 # second pass
-                slot = train_ouput[0]
-                second_pass_in_tags = self.get_start_tags(slot)
-                train_ouput, loss, slot_loss, intent_loss, _ = \
-                    sess.run([self.train_outputs, self.loss, self.slot_loss, self.intent_loss, self.train_op],
-                             feed_dict={self.input_data: seq_in_ids,
-                                        self.input_tags: second_pass_in_tags,
-                                        self.sequence_length: sequence_length,
-                                        self.slots: seq_out_ids,
-                                        self.slot_weights: seq_out_weights,
-                                        self.intent: label_ids})
+                # slot = train_ouput[0]
+                # second_pass_in_tags = self.get_start_tags(slot)
+                # train_ouput, loss, slot_loss, intent_loss, _ = \
+                #     sess.run([self.train_outputs, self.loss, self.slot_loss, self.intent_loss, self.train_op],
+                #              feed_dict={self.input_data: seq_in_ids,
+                #                         self.input_tags: second_pass_in_tags,
+                #                         self.sequence_length: sequence_length,
+                #                         self.slots: seq_out_ids,
+                #                         self.slot_weights: seq_out_weights,
+                #                         self.intent: label_ids})
             except:
                 print("Runtime Error in train_one_epoch")
                 break
@@ -666,13 +666,13 @@ class NatSLU(Model):
                                                                       self.intent: label_ids})
 
                 # second pass
-                slot = eval_outputs[0]
-                second_pass_in_tags = self.get_start_tags(slot)
-                eval_outputs = sess.run(self.eval_outputs, feed_dict={self.input_data: seq_in_ids,
-                                                                      self.input_tags: second_pass_in_tags,
-                                                                      self.sequence_length: sequence_length,
-                                                                      self.slots: seq_out_ids,
-                                                                      self.intent: label_ids})
+                # slot = eval_outputs[0]
+                # second_pass_in_tags = self.get_start_tags(slot)
+                # eval_outputs = sess.run(self.eval_outputs, feed_dict={self.input_data: seq_in_ids,
+                #                                                       self.input_tags: second_pass_in_tags,
+                #                                                       self.sequence_length: sequence_length,
+                #                                                       self.slots: seq_out_ids,
+                #                                                       self.intent: label_ids})
             except:
                 print("Runtime Error in evaluation")
                 break
@@ -739,7 +739,7 @@ class NatSLU(Model):
 
         step = 0
         if dump:
-            fout = open(os.path.join(self.full_test_path, '{}_{}'.format(self.arg.infer_file, epoch)), 'w')
+            fout = open(os.path.join(self.full_test_path, '{}_{}_{}'.format(self.arg.infer_file, epoch)), 'w')
 
         test_path = os.path.join(self.full_test_path, self.arg.input_file)
         batch_iter = self.get_batch_np_iter(test_path)
@@ -762,13 +762,13 @@ class NatSLU(Model):
                                                                        self.intent: label_ids})
 
                 # second pass
-                slot = infer_outputs[0]
-                second_pass_in_tags = self.get_start_tags(slot)
-                infer_outputs = sess.run(self.test_outputs, feed_dict={self.input_data: seq_in_ids,
-                                                                       self.input_tags: second_pass_in_tags,
-                                                                       self.sequence_length: sequence_length,
-                                                                       self.slots: seq_out_ids,
-                                                                       self.intent: label_ids})
+                # slot = infer_outputs[0]
+                # second_pass_in_tags = self.get_start_tags(slot)
+                # infer_outputs = sess.run(self.test_outputs, feed_dict={self.input_data: seq_in_ids,
+                #                                                        self.input_tags: second_pass_in_tags,
+                #                                                        self.sequence_length: sequence_length,
+                #                                                        self.slots: seq_out_ids,
+                #                                                        self.intent: label_ids})
             except:
                 print("Runtime Error in inference")
                 break
@@ -791,7 +791,7 @@ class NatSLU(Model):
             fout.close()
 
             # calculate uncoordinated chunk nums
-            diff_file = os.path.join(self.full_test_path, '{}_{}'.format(self.arg.infer_file, epoch))
+            diff_file = os.path.join(self.full_test_path, '{}_{}_{}'.format(self.arg.infer_file, epoch))
             uncoordinated_nums = get_uncoordinated_chunking_nums(diff_file)
             print("uncoordinated nums : {}".format(uncoordinated_nums))
 
@@ -814,7 +814,7 @@ class NatSLU(Model):
             self.evaluation(sess)
 
             if self.arg.dump:
-                if epoch % 20 == 0:
+                if epoch % 1 == 0:
                     self.inference(sess, epoch, self.arg.remain_diff, self.arg.dump)
             else:
                 print('dump is False')
@@ -825,12 +825,12 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
 
     # fmt: off
-    parser.add_argument('-name', dest="name", default='default-SLU', help='Name of the run')
+    parser.add_argument('--name', dest="name", default='default-SLU', help='Name of the run')
     parser.add_argument("--encode_mode", type=str, default='gb18030', help="encode mode")
     parser.add_argument("--split", type=str, default='\x01', help="split str")
     parser.add_argument('-restore', dest="restore", action='store_true',
                         help='Restore from the previous best saved model')
-    parser.add_argument('--dump', type=bool, default=False, help="is dump")
+    parser.add_argument('--dump', type=bool, default=True, help="is dump")
     parser.add_argument("--rm_nums", type=bool, default=False, help="rm nums")
     parser.add_argument("--remain_diff", type=bool, default=True, help="just remain diff")
 
